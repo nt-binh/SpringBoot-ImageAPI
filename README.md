@@ -1,68 +1,53 @@
-#PhotoAlbum
+#Rest Image API
 
-##About
-This is an example RESTful API written in Java and Spring Framework. This project is intended to be a demonstration of how a REST API can be structured and designed using Spring Boot/Actuator and Spring Data.
+This API is used to request and store the image using Rest API <br>
 
 ##Installation
-To run this application you will first need to install a couple packages: jdk 1.7 and maven (you can also install these packages with yum, brew, etc.)
+Need to install jdk and maven before running the application
 
 ```
 sudo apt-get install openjdk-7-jre
 sudo apt-get install maven
 ```
 
-This project is built using Spring Boot/Spring Actuator, which makes it very easy to get running. You can either run the application directly from maven: `mvn spring-boot:run`, or you can build the application package with `mvn clean package` and then run the jar directly: `java -jar target/PhotoAlbum-1.0-SNAPSHOT.jar`.
+The application can be run directly from maven: `mvn spring-boot:run`, or creating the jar package with `mvn clean package` and then run it: `java -jar target/Images-API-1.0-SNAPSHOT.jar`.
 
-##Usage
-The default username/password for this application is `user:user`. To access any of the endpoints you will be prompted for authorization.
-
-The relevant endpoints for this application are `/api/photos` and `/api/albums`. Both endpoints have the basic CRUD actions. For example, to view all photos, you can navigate to:
-
+##Endpoint
+The endpoints for the API are `/api/photos` and `/api/albums`.
 ```
 http://localhost:8080/api/photos
 ```
-
-Which should return the following JSON:
+The result is
 
 ```
 [
   {
     "id": "1",
-    "title": "just me",
-    "createdDate": "2015-08-31T09:14:05.097-0500",
-    "filePath": "me.png",
+    "title": "p8",
+    "createdDate": "2020-08-31T09:14:05.097-0500",
+    "filePath": "p8.jpg",
     "albumId": "1"
   },
   {
     "id": "2",
-    "title": "another pic",
-    "createdDate": "2015-08-31T09:14:05.097-0500",
-    "filePath": "another.png",
+    "title": "p024_splume",
+    "createdDate": "2020-08-31T09:14:05.097-0500",
+    "filePath": "p024_splume.png",
     "albumId": "1"
   },
   {
     "id": "3",
-    "title": "profile photo",
-    "createdDate": "2015-08-31T09:14:05.098-0500",
-    "filePath": "profile.png",
+    "title": "p043_wood",
+    "createdDate": "2020-08-31T09:14:05.098-0500",
+    "filePath": "p043_wood.png",
     "albumId": "1"
   },
   {
     "id": "4",
-    "title": "at the beach",
+    "title": "p043_wood_diagonal",
     "createdDate": "2015-08-31T09:14:05.098-0500",
-    "filePath": "beach.png",
-    "albumId": "2"
-  },
-  {
-    "id": "5",
-    "title": "at the park",
-    "createdDate": "2015-08-31T09:14:05.098-0500",
-    "filePath": "park.png",
+    "filePath": "p043_wood_diagonal.jpg",
     "albumId": "2"
   }
 ]
 ```
-
-For testing all of the CRUD actions, I recommend using [Postman](www.getpostman.com).
-# SpringBoot-ImageAPI
